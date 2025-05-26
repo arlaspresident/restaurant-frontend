@@ -7,10 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
         data.forEach(item => {
           const div = document.createElement('div');
+          div.classList.add('menu-item');
           div.innerHTML = `
+          <div class="left">
             <h3>${item.title}</h3>
             <p>${item.description}</p>
-            <p><strong>${item.price} kr</strong></p>
+            </div>
+            <div class="price">${item.price} kr</div>
           `;
           container.appendChild(div);
         });
