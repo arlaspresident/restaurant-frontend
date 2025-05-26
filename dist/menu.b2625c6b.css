@@ -239,7 +239,6 @@ form#bookingForm input::placeholder, form#bookingForm textarea::placeholder {
   color: #eee;
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
-  font-weight: 300;
 }
 
 .about-section p {

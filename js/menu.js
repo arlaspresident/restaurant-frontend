@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return acc;
           }, {});
 
-          const sortOrder = ['förrätt', 'varmrätt', 'efterrätt', 'dryck'];
+          const sortOrder = ['Förrätt', 'Varmrätt', 'Efterrätt', 'Dryck'];
           sortOrder.forEach(category => {
             if (!grouped[category]) return;
     

@@ -677,10 +677,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
             return acc;
         }, {});
         const sortOrder = [
-            "f\xf6rr\xe4tt",
-            "varmr\xe4tt",
-            "efterr\xe4tt",
-            'dryck'
+            "F\xf6rr\xe4tt",
+            "Varmr\xe4tt",
+            "Efterr\xe4tt",
+            'Dryck'
         ];
         sortOrder.forEach((category)=>{
             if (!grouped[category]) return;
