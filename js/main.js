@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/api/menu')
+fetch('https://restaurant-backend-u697.onrender.com/api/menu')
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById('menu-container');
