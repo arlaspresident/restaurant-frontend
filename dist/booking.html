@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang=sv><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Boka bord</title><link rel=stylesheet href=/restaurant-frontend.a702697d.css><body>
+    <nav>
+          <a href=/index.html>Hem</a>
+         <a href=/menu.html>Meny</a>
+          <a href=/booking.html>Boka bord</a>
+          <a href=/about.html>Om oss</a>
+      </nav>
+      <section class=booking-section>    
+  <h1>Boka bord</h1>
+  <form id=bookingForm>
+    <input id=name placeholder=Namn required>
+    <input type=email id=email placeholder=E-post required>
+    <input type=tel id=phone placeholder=Telefonnummer required>
+    <input type=number id=guests placeholder="Antal gäster" required>
+    <input type=date id=date required>
+    <input type=time id=time required>
+    <textarea id=message placeholder="Meddelande (valfritt)"></textarea>
+    <button>Skicka bokning</button>
+  </form>
+      </section>
+
+  <p id=status></p>
+
+  <footer class=site-footer>
+    <p>Noir &amp; Sel – Östermalm, Stockholm</p>
+    <p>📞 08-123 456 78 | ✉️ info@noirsel.se</p>
+  </footer>
+
+  <script type=module src=/booking.ed0d3082.js></script>
+
+
