@@ -16,6 +16,12 @@ body, html {
     z-index: -1;
     filter: brightness(60%);
   }
+
+  body {
+    background: url('../media/bakgrund.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
   
   nav {
     position: fixed;
@@ -109,4 +115,68 @@ body, html {
     margin-top: 0.5rem;
     font-size: 1rem;
   }
+  .site-footer {
+    background-color: #111;
+    color: #ddd;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .site-footer p {
+    margin: 0.3rem 0;
+  }
+
+form#bookingForm {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form#bookingForm input,
+  form#bookingForm textarea,
+  form#bookingForm button {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  form#bookingForm input,
+  form#bookingForm textarea {
+    background-color: #eee;
+  }
+  
+  form#bookingForm button {
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form#bookingForm button:hover {
+    background-color: #333;
+  }
+  
+  #bookingForm textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  #status {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: green;
+  }
+  
+  
   
