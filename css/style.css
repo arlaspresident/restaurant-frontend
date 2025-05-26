@@ -225,6 +225,60 @@ form#bookingForm {
     color: #ddd;
     padding-top: 7rem;
   }
+  .about-section {
+    max-width: 700px;
+    margin: 8rem auto;
+    padding: 2rem;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: #ddd;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+  
+  .about-section h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    color: #eee;
+  }
+  .about-section p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #ddd;
+  }
+  
+  .about-img {
+    max-width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin: 1.5rem 2rem 1.5rem 0;
+  }
+  
+  .about-img.left {
+    float: left;
+    margin-right: 2rem;
+    margin-left: 0;
+  }
+  
+  .about-img.right {
+    float: right;
+    margin-left: 2rem;
+    margin-right: 0;
+  }
+  
+  .about-section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
   
   
   
