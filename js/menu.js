@@ -5,7 +5,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById('menu-container');
         container.innerHTML = '';
   
-        data.forEach(item => {
+        const grouped = data.reduce((acc, item) => {
+            if (!acc[item.category]) acc[item.category] = [];
+            acc[item.category].push(item);
+            return acc;
+          }, {});
+
+          const sortOrder = ['förrätt', 'varmrätt', 'efterrätt', 'dryck'];
+          sortOrder.forEach(category => {
+            if (!grouped[category]) return;
+    
+            const section = document.createElement('section');
+            const heading = document.createElement('h2');
+            heading.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+            section.appendChild(heading);
+
+        grouped[category].forEach(item => {
           const div = document.createElement('div');
           div.classList.add('menu-item');
           div.innerHTML = `
@@ -15,7 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="price">${item.price} kr</div>
           `;
-          container.appendChild(div);
+          section.appendChild(div);
+        });
+
+          container.appendChild(section);
         });
       })
       .catch(err => {
