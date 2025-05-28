@@ -1,11 +1,29 @@
-body, html {
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+  
+  body {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', sans-serif;
     color: white;
-    height: 100%;
+    min-height: 100%;
+    background: url('../media/bakgrund.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden !important;
   }
-  
+
+  html { scrollbar-width: none; }
+body { -ms-overflow-style: none; } 
+body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }  
+
   .bg-video {
     position: fixed;
     top: 0;
@@ -15,25 +33,24 @@ body, html {
     object-fit: cover;
     z-index: -1;
     filter: brightness(60%);
+    pointer-events: none;     
+    user-select: none; 
+    -webkit-user-select: none;
   }
 
-  body {
-    background: url('../media/bakgrund.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-  }
-  
   nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    max-width: 100%;
     background-color: rgba(0, 0, 0, 0.85);
     display: flex;
     justify-content: center;
     gap: 3rem;
     padding: 1rem 0;
-    z-index: 2;
+    flex-wrap: wrap;
+    overflow-x: auto
   }
   
   nav a {
@@ -42,6 +59,7 @@ body, html {
     font-weight: 500;
     font-size: 1rem;
     transition: opacity 0.3s;
+    white-space: nowrap;
   }
   
   nav a:hover {
@@ -277,7 +295,4 @@ form#bookingForm {
     display: table;
     clear: both;
   }
-  
-  
-  
   
