@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('bookingForm');
     const status = document.getElementById('status');
-  
+
+  //lyssna på formulärets submit
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
   
+      //skapa en bokning med användarens input
       const booking = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
   
       try {
+        //skicka bokningen till backend
         const res = await fetch('https://restaurant-backend-u697.onrender.com/api/bookings', {
           method: 'POST',
           headers: {
@@ -25,14 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
   
         const data = await res.json();
-  
+  //om allt ok, visa bekräftelse och nollställ formuläret
         if (res.ok) {
           status.textContent = 'Bokning skickad';
           form.reset();
         } else {
+          //om backend svarar med ett fel
           status.textContent = data.error || 'Kunde inte skicka bokning';
         }
       } catch (err) {
+        //fångar andra fel
         console.error('Fel vid bokning:', err);
         status.textContent = 'Något gick fel';
       }

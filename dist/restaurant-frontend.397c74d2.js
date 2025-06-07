@@ -160,11 +160,11 @@
       });
     }
   }
-})({"MAtcu":[function(require,module,exports,__globalThis) {
+})({"5igOc":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 51509;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -680,6 +680,6 @@ fetch('https://restaurant-backend-u697.onrender.com/api/menu').then((res)=>res.j
     });
 }).catch((err)=>console.error("Fel vid h\xe4mtning av meny:", err));
 
-},{}]},["MAtcu","agb61"], "agb61", "parcelRequire8a38", {})
+},{}]},["5igOc","agb61"], "agb61", "parcelRequire8a38", {})
 
 //# sourceMappingURL=restaurant-frontend.397c74d2.js.map
